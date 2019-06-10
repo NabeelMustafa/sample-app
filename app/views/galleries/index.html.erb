@@ -1,0 +1,61 @@
+<section class="first-section">
+    <div class="section third-height flex vertical-center">
+        <div class="parallax-gallery"></div>
+        <div class="container">
+            <div class="titles-internals">
+                <h3 class="text-center">033 Rooftop </h3>
+                <h2>Galeria</h2>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="gallery">
+
+    <div class="section padding-top-grd">
+
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 col-md-offset-2">
+                    <div class="bigger-margin text-center">
+                        <h3 class="title-section">Conheça 033 Rooftop</h3>
+                        <h2 class="title-background"><span>Galeria</span></h2>
+                        <p class="subtitle-section">Elegante, Versátil e Atemporal</p>
+                        <hr>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- <div class="section">
+        <div class="container">
+            <div class="remove-top remove-bottom">
+                <div id="portfolio-filter">
+                    <ul id="filter">
+                        <li><a href="#" class="current" data-filter="*" title="">Todos</a></li>
+                        <li><a href="#" data-filter=".social" title="">Social</a></li>
+                        <li><a href="#" data-filter=".corporative" title="">Corporativo</a></li>
+                        <li><a href="#" data-filter=".structure" title="">Estrutura</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div> -->
+    <div id="render-galleries"></div>
+    <script id="list-galleries" type="text/x-handlebars-template">
+        <div id="box-gallery">
+            <div class="portfolio-wrapper-1">
+                {{#each data}}
+                    <a href="{{attributes.image-large}}"  class="portfolio-wrap-four social" data-fancybox="abc" data-caption="{{attributes.description}} {{attributes.photographer}}">
+                        <img src="{{attributes.image-mini}}" alt=""/>
+                        <div class="mask">
+                            <h6>{{attributes.title}}</h6>
+                        </div>
+                    </a>
+                {{/each}}
+            </div>
+        </div>
+    </script>
+
+</section>

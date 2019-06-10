@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="utf-8">
+  <title><%= load_title(controller_name) %></title>
+	<meta name="description" content="">
+	<meta name="author" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+    <%= csrf_meta_tags %>
+    <link rel="shortcut icon" href="<%= asset_url('favicon64x64.png') %>">
+	<link rel="apple-touch-icon" href="apple-touch-icon.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="apple-touch-icon-114x114.png">
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.css" />
+
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-74766673-2"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-74766673-2');
+  </script>
+  
+  <!-- Global site tag (gtag.js) - Google AdWords: 820609263 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-820609263"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'AW-820609263');
+  </script>
+  </head>
+
+
+  <body>
+  	<main class="animsition">
+        <%=  %>
+        <%= puts controller_name %>
+  		<%= render partial: 'shared/main_menu' unless controller_name == 'sessions'  %>
+    	<%= yield %>
+    	<%= render partial: 'shared/footer' unless controller_name == 'sessions'  %>
+
+    </main>
+	   <script src="//code.jquery.com/jquery-3.2.1.min.js"></script>
+	   <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.js"></script>
+	   <script type="text/javascript">
+		    $("[data-fancybox]").fancybox();
+	   </script>
+
+      <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+      <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAvpnlHRidMIU374bKM5-sx8ruc01OvDjI"></script>
+
+  <script>
+  function gtag_report_conversion(url) {
+    var callback = function () {
+      if (typeof(url) != 'undefined') {
+        window.location = url;
+      }
+    };
+    gtag('event', 'conversion', {
+        'send_to': 'AW-820609263/XMcNCIiR23sQ74GmhwM',
+        'event_callback': callback
+    });
+    return false;
+  }
+  </script>
+  </body>
+</html>

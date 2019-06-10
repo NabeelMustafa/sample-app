@@ -1,0 +1,46 @@
+.parallax-structure {
+	background: asset_url('destaque-rooftop.jpg') no-repeat;
+	background-position: bottom;
+	background-size: cover;
+	position: absolute;
+	top: 0; 
+	left: 0; 
+	right: 0;
+	bottom: 0;
+	z-index: -1;
+	width:100%;  
+}
+.parallax-gallery {
+	background: asset_url('bg-parallax-gallery.jpg') no-repeat;
+	background-position: bottom;
+	background-size: cover;
+	position: absolute;
+	top: 0; 
+	left: 0; 
+	right: 0;
+	bottom: 0;
+	z-index: -1;
+	width:100%;  
+}
+@media only screen and (min-width: 2000px) { 
+	.parallax-structure { background-size: cover; 
+} 
+}
+ @media only screen and (min-device-width : 768px) and (max-device-width : 1200px) and (orientation : landscape) {
+	.parallax-structure { 
+		background-size: cover; background-attachment: scroll; background-position: bottom center!important; 
+	}
+}
+
+.parallax-contato {
+	background: asset_url('parallax-contato.jpg') no-repeat;
+	background-position: bottom;
+	background-size: cover;
+	position: absolute;
+	top: 0; 
+	left: 0; 
+	right: 0;
+	bottom: 0;
+	z-index: -1;
+	width:100%;  
+}

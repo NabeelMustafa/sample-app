@@ -1,0 +1,24 @@
+#scroll-link{
+	padding: 100px 0;
+	&.above-default{
+		padding: 0;
+	}
+	.title{
+		color: #ec222a;
+		font-family: 'Dosis';
+		font-size: 25px;
+		letter-spacing: 4px;
+		margin-bottom: 15px;
+	}
+	.subtitle{
+		color: #FFF;
+		font-family: 'Playfair Display', serif !important;
+		font-style: italic !important;
+	}
+	hr{
+		margin-bottom: 20px;
+	}
+	.text-padding{
+		font-family: 'Open Sans';
+	}
+}

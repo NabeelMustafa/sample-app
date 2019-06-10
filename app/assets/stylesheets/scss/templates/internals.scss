@@ -1,0 +1,27 @@
+.first-section{
+	margin-top: 93px;
+}
+
+.titles-internals{
+	display: inline-block;
+	h3{
+		font-size: 20px;
+		font-family: 'Dosis';
+		text-transform: uppercase;
+		font-weight: 600;
+		color: #ec222a;
+		margin-bottom: 0;
+		line-height: 26px;
+	}
+	h2{
+		font-size: 70px;
+		font-style: italic;
+		color: #FFF;
+		font-family: 'Playfair Display', serif;
+		font-weight: 900;
+		text-transform: initial;
+		@media (max-width: 992px){
+			font-size: 40px;
+		}
+	}
+}

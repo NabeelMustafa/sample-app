@@ -1,0 +1,33 @@
+.box-title-partners{
+	height: 195px;
+	position: relative;
+	.text-partners{
+	    line-height: 0;
+	    text-align: center;
+	    margin-left: 10%;
+	    margin-bottom: 0;
+	    font-family: 'Dosis';
+	    font-size: 23px;
+	    color: #ec222a;
+	}
+	@media (max-width: 992px){
+		height: auto;
+    	padding: 60px 0 0;
+	}
+}
+.partners{
+	position: relative;
+	&:before{
+	    content: '';
+	    position: absolute;
+	    background: url('../balls-top-right.png');
+	    left: 30px;
+	    top: 130px;
+	    width: 136px;
+	    height: 426px;
+	    z-index: 1020;
+	    @media (max-width: 991px){
+	    	content: initial;
+	    }
+	}
+}

@@ -1,0 +1,48 @@
+#section-about-santander{
+	margin-bottom: 150px;
+	position: relative;
+	&:before{
+		content: '';
+		background: asset_url('bg-about-santander.jpg') no-repeat right bottom;
+		background-size: cover;
+		position: absolute;
+		width: 50%;
+		height: 584px;
+		top: 0;
+		left: 0;
+	}
+	.cliente-corporativo{
+	    position: absolute;
+	    left: 17%;
+	    margin-left: -140px;
+	    margin-bottom: 40px;
+	    bottom: -105px;
+	}
+	.box{
+		padding: 10% 15%;
+		min-height: 584px;
+	}
+	@media (max-width: 992px){
+		margin-bottom: auto;
+		&:before{
+			content: initial;
+		}
+		&.margin-grd{
+			margin: 60px 0;
+		}
+		.cliente-corporativo{
+			position: relative;
+			left: 0;
+			margin-left: 0;
+			margin-bottom: 0;
+			display: block;
+			margin: 0 auto;
+			bottom: 0;
+		}
+	}
+	@media (min-height: 900px){
+		&.margin-grd{
+			margin: 200px 0 100px;
+		}
+	}
+}

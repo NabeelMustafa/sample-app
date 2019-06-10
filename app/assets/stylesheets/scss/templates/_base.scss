@@ -1,0 +1,336 @@
+/*
+* Skeleton V1.2
+* Copyright 2011, Dave Gamache
+* www.getskeleton.com
+* Free to use under the MIT license.
+* http://www.opensource.org/licenses/mit-license.php
+* 6/20/2012
+*/
+
+
+/* Table of Content
+==================================================
+	#Reset & Basics
+	#Basic Styles
+	#Site Styles
+	#Typography
+	#Links
+	#Lists
+	#Images
+	#Buttons
+	#Forms
+	#Misc */
+
+
+/* #Reset & Basics (Inspired by E. Meyers)
+================================================== */
+	html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video, select{
+		margin: 0;
+		padding: 0;
+		border: 0;
+		font-size: 100%;
+		font: inherit;
+		vertical-align: baseline; }
+	article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+		display: block; }
+	body {
+		line-height: 1; }
+	ol, ul {
+		list-style: none; }
+	blockquote, q {
+		quotes: none; }
+	blockquote:before, blockquote:after,
+	q:before, q:after {
+		content: '';
+		content: none; }
+	table {
+		border-collapse: collapse;
+		border-spacing: 0; }
+
+/* #Basic Styles
+================================================== */
+body {
+	background: #f2f2f2;
+	font-family: 'Open Sans', sans-serif;
+	font-weight:300;
+	font-size: 15px;
+	line-height:23px;
+	color:#212121;
+	overflow-x:hidden;
+	letter-spacing:1px;
+	-webkit-font-smoothing: antialiased; /* Fix for webkit rendering */
+	text-shadow: 1px 1px 1px rgba(0,0,0,0.004);
+	-webkit-text-size-adjust: 100%;
+    box-sizing: border-box;
+ }
+ html {
+	overflow-x:hidden; 
+}
+/* #Typography
+================================================== */
+h1, h2, h3, h4, h5, h6 {
+	color: #414141;
+	font-family: 'Dosis', sans-serif;
+	font-weight:400;
+}
+h1 a, h2 a, h3 a, h4 a, h5 a, h6 a { font-weight: inherit; }
+h1 { font-size: 40px; line-height:46px;text-transform:uppercase; }
+h2 { font-size: 34px; line-height:40px;text-transform:uppercase;}
+h3 { font-size: 30px; line-height: 36px;text-transform:uppercase;letter-spacing:8px;}
+h4 { font-size: 24px; line-height: 30px;text-transform:uppercase;letter-spacing:14px;font-weight:600;}
+h5 { font-size: 20px; line-height: 26px;text-transform:uppercase;letter-spacing:7px;font-weight:600;}
+h6 { font-size: 18px; line-height: 24px;text-transform:uppercase;letter-spacing:4px;font-weight:600;}
+
+
+	p {  }
+	p img { margin: 0; }
+	p.lead { font-size: 21px; line-height: 27px; color: #777;  }
+
+	em { font-style: italic; }
+	strong { font-weight: 600;}
+	small { font-size: 80%; }
+	
+
+
+/*	Blockquotes  */
+	blockquote, blockquote p { font-size: 17px; line-height: 24px; color: #777; }
+	blockquote { margin: 0 0 20px; padding: 9px 20px 0 19px; }
+	blockquote cite { display: block; font-size: 12px; color: #555; }
+	blockquote cite:before { content: "\2014 \0020"; }
+	blockquote cite a, blockquote cite a:visited, blockquote cite a:visited { color: #555; }
+
+	hr { border: solid #323a3d; border-width: 1px 0 0; clear: both; margin:0 10px 0 10px; height: 0; position:relative;}
+
+
+/* #Links
+================================================== */
+	a, a:visited { text-decoration: none; }
+	a:hover, a:focus { color: #e74c3c;}
+	p a, p a:visited { line-height: inherit; text-decoration: none;}
+	a:focus{
+	outline:none;
+	}
+
+/* #Lists
+================================================== */
+	ul, ol { }
+	ul { list-style: none outside; }
+	ol { list-style: decimal; }
+	ol, ul.square, ul.circle, ul.disc { margin-left: 30px; }
+	ul.square { list-style: square outside; }
+	ul.circle { list-style: circle outside; }
+	ul.disc { list-style: disc outside; }
+	ul ul, ul ol,
+	ol ol, ol ul { font-size: 90%;  }
+	ul ul li, ul ol li,
+	ol ol li, ol ul li {  }
+	li { line-height: 18px; }
+	ul.large li { line-height: 21px; }
+	li p { line-height: 21px; }
+/* #Buttons
+================================================== */
+
+	.button,
+	button,
+	input[type="submit"],
+	input[type="reset"],
+	input[type="button"] {
+	border:none;
+	-webkit-transition : all 0.3s ease-out;
+	-moz-transition : all 0.3s ease-out;
+	-o-transition :all 0.3s ease-out;
+	transition : all 0.3s ease-out;}
+
+	.button:hover,
+	button:hover,
+	input[type="submit"]:hover,
+	input[type="reset"]:hover,
+	input[type="button"]:hover {		 }
+
+	.button:active,
+	button:active,
+	input[type="submit"]:active,
+	input[type="reset"]:active,
+	input[type="button"]:active {	}
+
+	.button.full-width,
+	button.full-width,
+	input[type="submit"].full-width,
+	input[type="reset"].full-width,
+	input[type="button"].full-width {}
+
+	/* Fix for odd Mozilla border & padding issues */
+	button::-moz-focus-inner,
+	input::-moz-focus-inner {
+    border: 0;
+    padding: 0;
+	}
+/* #Images
+================================================== */
+
+.pull-xs-left{float:left!important}
+.pull-xs-right{float:right!important}
+.pull-xs-none{float:none!important}
+
+.clear {
+	clear: both;
+	display: block;
+	overflow: hidden;
+	visibility: hidden;
+	width: 0;
+	height: 0;
+}
+
+.relative{
+	position: relative;
+}
+
+h4.title{
+	color: rgb(240,0,0);
+}
+.subtitle{
+	color: #282828;
+	font-style: normal !important;
+	position: relative;
+	margin-bottom: 25px;
+}
+hr{
+    display: block;
+    border: 0px !important;
+    height: 10px !important;
+    background-image: url('/assets/subtitle-underline.png');
+    background-repeat: no-repeat;
+    background-position: center;
+}
+hr.hr-white{
+	background-image: url('/assets/subtitle-underline-white.png');
+}
+hr.hr-left{
+	background-position: left center;
+	margin-left: 0; 
+}
+p.text{
+	color: #808080;
+	font-family: 'Open Sans' !important;
+	letter-spacing: 0 !important;
+}
+.logo{
+	width: 115px;
+	margin-left: -1px;
+}
+.flex{
+	display: flex;
+}
+.flex-row{
+	flex-direction: row;
+}
+.flex-column{
+	flex-direction: column;
+}
+.in-block{
+	display: inline-block;
+}
+.row-center{
+	justify-content: center;
+}
+.vertical-center{
+	align-items: center;
+}
+.text-center{
+	text-align: center;
+}
+.text-space-4{
+	letter-spacing: 4px;
+}
+.no-margin{
+	margin-left: 0 !important;
+	margin-right: 0 !important;
+}
+.no-padding{
+	padding-left: 0 !important;
+	padding-right: 0 !important;
+}
+.btn-roof{
+	display: block;
+	width: 260px;
+	text-align: center;
+	color: #FFF;
+	border: 3px solid #ec222a;
+	padding: 13px 0;
+	font-family: 'Dosis';
+	color: #FFF;
+	text-decoration: none;
+	font-size: 15px;
+	line-height: 22px;
+	margin-top: 40px;
+	text-transform: uppercase;
+	font-style: normal;
+    letter-spacing: 3px;
+    font-weight: 500;	
+	&:hover, &:focus{
+		color: #FFF;
+		text-decoration: none;
+	}
+}
+.uppercase{
+	text-transform: uppercase;
+}
+.m-auto{
+	margin: 0 auto
+}
+.dark-background{
+	background-color: #1f1f1f;
+	.subtitle-section{
+		color: #FFF;
+	}
+	.btn-roof{
+		color: #FFF;
+	}
+	p.text{
+		color: #a7a7a7;
+	}
+	.title-background{
+		color: #242424 !important;
+	}
+	@media(max-width: 480px){
+		&.padding-top.padding-bottom{
+			padding: 60px 20px;
+		}
+	}
+}
+.light-background{
+	background-color: #FFF;
+	.subtitle-section{
+		color: #FFF;
+	}
+	.btn-roof{
+		color: #282828;
+	}
+}
+.list-bullet{
+	& > *{
+		text-transform: uppercase;
+		margin-bottom: 44px;
+		letter-spacing: 4px;
+		&:before{
+			content: '•';
+			padding-right: 30px; 
+			color: #ec222a;
+		}
+	}
+}
+.no-margin-bottom{
+	margin-bottom: 0 !important;
+}
+.img-responsive{
+	max-width: 100%;
+	height: auto;
+}
+.display-block{
+	display: block !important;
+}
+@media (min-width: 992px){
+	.flex-md-up{
+		display: flex;
+	}
+}

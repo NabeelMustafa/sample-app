@@ -1,0 +1,143 @@
+<section class="first-section">
+
+	<div class="section third-height flex vertical-center">
+
+		<div class="parallax-structure"></div>
+
+		<div class="container">
+			<div class="titles-internals">
+				<h3>Atendimento</h3>
+				<h2>Contato</h2>
+			</div>
+		</div>
+	</div>
+
+</section>
+
+<section class="padding-top padding-bottom-small">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<div class="text-center">
+					<h3 class="title-section">Realize seu evento no 033 Rooftop</h3>
+					<h2 class="title-background"><span>Fale Conosco</span></h2>
+					<p class="subtitle-section">Fale conosco e solicite seu orçamento</p>
+					<hr>
+				</div>
+			</div>
+			<div class="col-md-8 col-md-offset-2">
+				<p class="text text-center">Desconto de 20% na locação do espaço, exclusivo para clientes corporativos Santander. Preencha o formulário e saiba mais sobre o benefício.</p>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section id="contact">
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-lg-2 col-md-6 col-lg-offset-2">
+				<div class="four columns">
+					<div class="services-box-2">
+						<div class="icon icon-location-pin"></div>
+						<h6>VISITE-NOS</h6>
+						<p>+Av. Presidente Juscelino Kubitschek, 2041 -  Bairro Itaim Bibi - São Paulo/SP CEP: 04543-011</p>
+					</div>
+				</div>
+				<div class="four columns">
+					<div class="services-box-2">
+						<div class="icon icon-phone"></div>
+						<h6>CONTATO</h6>
+						<p><a href="tel:01148106868">+55 11 4810-6868</a></p>
+					</div>
+				</div>
+				<div class="four columns">
+					<div class="services-box-2">
+						<div class="icon"></div>
+						<h6>E-MAIL</h6>
+						<p><a href="mailto:eventos@teatrosantander.com.br">eventos@teatrosantander.com.br</a></p>
+					</div>
+				</div>
+<!-- 				<img src="<%= asset_path 'banner-tour360-contact.jpg' %>" class="img-responsive padding-top-small" alt="">		 -->
+			</div>
+			<div class="col-lg-4 col-md-6 col-lg-offset-1">
+				<h3>Faça seu orçamento</h3>
+				<div id="ajax-form">
+                    <%= form_for @contact, url: { action: "create" }, remote: "true", html: { role: :form, id: 'form-budget' } do |f| %>
+
+						<div class="event-social">
+							<input type="radio" name="evento" id="social">
+							<label for="social">Evento Social</label>
+						</div>
+						<div class="event-corporative">
+							<input type="radio" name="evento" id="corporativo">
+							<label for="corporativo">Evento Corporativo</label>
+						</div>
+                        <div class="form-control">
+                            <%= f.label :name, class: 'hidden', for: 'nome' %>
+                            <%= f.text_field :name, id: 'name', placeholder: 'Nome' %>
+						</div>
+						<div class="form-control">
+							<label for="email" class="hidden">E-mail</label>
+							<input name="email" id="email" type="text" placeholder="E-mail*"/>
+						</div>
+						<div class="form-control">
+							<label for="email" class="hidden">Telefone</label>
+							<input name="telefone" id="telefone" type="tel" placeholder="Telefone*"/>
+						</div>
+						<div class="form-control margin">
+							<div class="col-md-6 row no-margin-bottom">
+								<label for="evento">Tipo de evento:</label>
+							</div>
+							<div class="col-md-6 row no-margin-bottom no-margin no-padding">
+								<select name="" id="evento" class="evento">
+									<option value="">Escolha uma opção</option>
+									<option value=""></option>
+									<option value=""></option>
+								</select>
+							</div>
+						</div>
+						<div class="form-control margin">
+							<div class="col-md-6 row no-margin-bottom">
+								<label for="data">Data prevista para o evento:</label>
+							</div>
+							<div class="col-md-6 row no-margin-bottom no-margin no-padding">
+								<input type="date" id="data">
+							</div>
+						</div>
+						<div class="form-control margin">
+							<div class="col-md-6 row no-margin-bottom">
+								<label for="estimativa">Estimativa de convidados:</label>
+							</div>
+							<div class="col-md-6 row no-margin-bottom no-margin no-padding">
+								<input type="text" id="estimativa">
+							</div>
+						</div>
+						<div class="form-control">
+							<label for="descricao" class="hidden">Descrição</label>
+							<input name="descricao" id="descricao" type="text" placeholder="Descrição*"/>
+						</div>
+						<div class="form-control">
+							<div class="cliente-santander">
+								<input type="checkbox" id="cliente-santander"><label for="cliente-santander">Cliente Santander<br>Empresarial</label>
+							</div>
+							<button class="btn-roof" id="enviar">Enviar</button>
+						</div>
+					<% end %>
+				</div>
+
+			</div>
+		</div>
+	</div>
+</section>
+
+<section id="google-map" class="section">
+	<div id="cd-google-map">
+		<div id="google-container"></div>
+		<div id="cd-zoom-in"></div>
+		<div id="cd-zoom-out"></div>
+		<address>
+			<span>Av. Presidente Juscelino</span><br><span>Kubitschek, 2041</span><br><span>Bairro Itaim Bibi - SP</span>
+		</address>
+
+	</div>
+</section>

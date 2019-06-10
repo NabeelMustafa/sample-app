@@ -1,0 +1,56 @@
+// Templates
+@import "templates/base";
+@import "templates/layout";
+@import "libraries/bootstrap/bootstrap";
+
+// Libraries
+@import "libraries/skeleton";
+@import "libraries/animsition.min";
+@import "libraries/simple-line-icons";
+@import "libraries/owl.carousel";
+@import "libraries/owl.transitions";
+@import "libraries/_ionicons";
+@import "libraries/revolution";
+@import "libraries/revolution-layers";
+@import "libraries/revolution-navigation";
+@import "libraries/dropdown/style";
+@import "libraries/theme/style";
+@import "libraries/tether.min";
+@import "libraries/animate.css/animate.min";
+@import "libraries/additional/mbr-additional";
+@import "libraries/font-awesome";
+
+// Molecules
+@import "molecules/boxes";
+@import "molecules/partners";
+@import "molecules/titles";
+@import "molecules/menu";
+@import "molecules/gallery";
+@import "molecules/parallax";
+@import "molecules/dark-carousel";
+@import "molecules/accordion";
+@import "molecules/gallery-picture";
+@import "molecules/services";
+
+// Organisms
+@import "organisms/about";
+@import "organisms/slider";
+@import "organisms/footer";
+@import "organisms/diferencials";
+@import "organisms/benefits";
+@import "organisms/text-benefits";
+@import "organisms/structure";
+@import "organisms/video-parallax";
+@import "organisms/success";
+@import "organisms/box-structure";
+@import "organisms/section-about-santander";
+@import "organisms/contact";
+
+// Templates
+@import "templates/internals";
+
+@import "page/login"
+
+// // Styles Old
+// @import "style";
+// @import "responsive";

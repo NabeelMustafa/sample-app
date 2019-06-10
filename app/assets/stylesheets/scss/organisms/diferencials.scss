@@ -1,0 +1,43 @@
+#diferencials{
+	h2{
+		font-family: 'Playfair Display', serif;
+		color: #ff1d25;
+	    @media (max-width: 992px) {
+	    	font-size: 55px;
+	    }		
+	}
+	h3{
+		font-family: 'Dosis';
+		color: #ff1d25;
+	}
+	.subtitle{
+		font-family: 'Playfair Display', serif;
+		font-style: italic;
+	}
+	&:before{
+	    content: '';
+	    position: absolute;
+	    left: -224px;
+	    background: url('../assets/before-titles.png') no-repeat;
+	    width: 500px;
+	    height: 131px;
+	    top: 0;
+	    z-index: 9;
+	    @media (max-width: 992px) {
+	    	content: initial;
+	    }
+	}
+	&:after{
+	    content: '';
+	    position: absolute;
+	    right: -40px;
+	    background: url('../assets/before-titles.png') no-repeat;
+	    width: 248px;
+	    height: 131px;
+	    top: 0;
+	    z-index: 9;
+	    @media (max-width: 992px) {
+	    	content: initial;
+	    }
+	}	
+}

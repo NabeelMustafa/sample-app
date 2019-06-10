@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  customer_kind: MyString
+  name: MyString
+  email: MyString
+  phone: MyString
+  kind_event: one
+  date_event: 2018-01-29 15:29:29
+  invited_number: 1
+  description: MyString
+
+two:
+  customer_kind: MyString
+  name: MyString
+  email: MyString
+  phone: MyString
+  kind_event: two
+  date_event: 2018-01-29 15:29:29
+  invited_number: 1
+  description: MyString

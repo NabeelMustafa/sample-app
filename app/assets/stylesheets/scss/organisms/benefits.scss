@@ -1,0 +1,27 @@
+#benefits{
+	height: 800px;
+}
+
+.box-benefits{
+	height: 800px;
+}
+
+.parallax-benefits {
+	background: url('/assets/bg-parallax-home.jpg') repeat fixed;
+	background-size: cover;
+	height: 800px;
+	position: absolute;
+	top: 0; 
+	left: 0; 
+	right: 0;
+	bottom: 0;
+	z-index: -1;
+	width:100%;  
+}
+@media only screen and (min-width: 1930px) { .parallax-benefits { background-size: cover; } }
+ @media only screen and (min-device-width : 768px) and (max-device-width : 1200px) and (orientation : landscape) {
+	.parallax-benefits { background-size: cover; background-attachment: scroll; background-position: top center!important; }
+}
+@media only screen and (max-width: 1400px) {
+	.parallax-benefits { background-size: cover; background-attachment: scroll; background-position: top center!important; }
+}

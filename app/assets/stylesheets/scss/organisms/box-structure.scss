@@ -1,0 +1,13 @@
+.box-structure{
+	p{
+		margin-bottom: 20px;
+	}
+	@media (max-width: 992px){
+		.title-section, .subtitle-section{
+			text-align: center;
+		}
+		hr.hr-left{
+			background-position: center;
+		}
+	}
+}

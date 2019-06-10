@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  </head>
+  <body>
+    <h1>Orçamento - 033Rooftop</h1>
+    <p>
+        <b>Tipo do Evento:</b> <%= @budget.customer_kind == "F" ? "Social" : "Corporativo" %>
+    </p>
+    <p>
+        <b>Nome:</b> <%= @budget.name %>
+    </p>
+    <p>
+        <b>E-mail:</b> <%= @budget.email %>
+    </p>
+    <p>
+        <b>Telefone:</b> <%= @budget.phone %>
+    </p>
+    <p>
+        <b>Tipo de Evento:</b> <%= @budget.kind_event.description %>
+    </p>
+    <p>
+        <b>Data Prevista do Evento:</b> <%= @budget.date_event.strftime('%d/%m/%Y') %>
+    </p>
+    <p>
+        <b>Estimativa de Convidados:</b> <%= @budget.invited_number %>
+    </p>
+    <p>
+        <b>Mensagem:</b> <%= @budget.description %>
+    </p>
+    <p>
+        <b>Cliente Sandander Empresarial:</b> <%= @budget.customer_santander == true ? "Sim" : "Não" %>
+    </p>
+  </body>
+</html>
+

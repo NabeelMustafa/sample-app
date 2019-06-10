@@ -1,0 +1,165 @@
+<section class="first-section">
+
+	<div class="section third-height flex vertical-center">
+
+		<div class="parallax-contato"></div>
+
+		<div class="container">
+			<div class="titles-internals">
+				<h3>&nbsp;&nbsp;&nbsp;Atendimento</h3>
+				<h2>Contato</h2>
+			</div>
+		</div>
+	</div>
+
+</section>
+
+<section class="padding-top padding-bottom-small">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<div class="text-center">
+					<h3 class="title-section">Realize seu evento no 033 Rooftop</h3>
+					<h2 class="title-background"><span>Fale Conosco</span></h2>
+					<p class="subtitle-section">Fale conosco e solicite seu orçamento</p>
+					<hr>
+				</div>
+			</div>
+			<div class="col-md-8 col-md-offset-2">
+				<p class="text text-center">Desconto de 20% na locação do espaço, exclusivo para clientes corporativos Santander. Preencha o formulário e saiba mais sobre o benefício.</p>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section id="contact">
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-xl-3 col-lg-3 col-md-5 col-xl-offset-2 col-lg-offset-1 hidden-sm-down">
+				<div class="four columns">
+					<div class="services-box-2">
+						<div class="icon icon-location-pin"></div>
+						<h6>VISITE-NOS</h6>
+						<p>+Av. Presidente Juscelino Kubitschek, 2041 -  Bairro Itaim Bibi - São Paulo/SP CEP: 04543-011</p>
+					</div>
+				</div>
+				<div class="four columns">
+					<div class="services-box-2">
+						<div class="icon icon-phone"></div>
+						<h6>CONTATO</h6>
+						<p><a href="tel:01148106868" class="link-text">+55 11 4810-6868</a></p>
+						<h6>WhatsApp</h6>
+						<p><a href="https://api.whatsapp.com/send?phone=011942803332" class="link-text">(11) 94280-3332</a></p>
+					</div>
+				</div>
+				<div class="four columns">
+					<div class="services-box-2">
+						<div class="icon icon-envelope-letter"></div>
+						<h6>E-MAIL</h6>
+						<p><a href="mailto:eventos@teatrosantander.com.br" class="link-text" style="
+    font-size: 15px;">eventos@teatrosantander.com.br</a></p>
+					</div>
+				</div>
+<!-- 				<img src="<%= asset_path 'banner-tour360-contact.jpg' %>" class="img-responsive padding-top-small" alt="">		 -->
+			</div>
+			<div class="col-xl-4 col-lg-5 col-md-7 col-lg-offset-1">
+				<h3>Faça seu orçamento</h3>
+				<div id="ajax-form">
+                    <%= form_for @budget, url: { action: "create" }, html: { id: 'form-budget', onsubmit: "return validateForm()"} do |f| %>
+
+						<div class="event-social">
+							<%= f.radio_button :customer_kind, "F", id: 'social', required: true %><label for="social">Evento Social</label>
+						</div>
+						<div class="event-corporative">
+							<%= f.radio_button :customer_kind, "J", id: 'corporativo' %><label for="corporativo">Evento Corporativo</label>
+						</div>
+                        <div class="form-control">
+                            <%= f.label :name, class: 'hidden', for: 'nome' %>
+                            <%= f.text_field :name, id: 'name', placeholder: 'Nome*', required: true %>
+						</div>
+						<div class="form-control">
+							<%= f.label :email, class: 'hidden', for: 'email' %>
+                            <%= f.email_field :email, id: 'email', placeholder: 'E-mail*', required: true %>
+						</div>
+						<div class="form-control">
+							<%= f.label :phone, class: 'hidden', for: 'phone' %>
+                            <%= f.text_field :phone, class: 'phone', id: 'phone', placeholder: 'Telefone*', required: true %>
+						</div>
+						<div class="form-control margin">
+							<div class="col-md-12 row no-margin-bottom">
+								<label for="evento">Tipo de evento:</label>
+							</div>
+							<div class="col-md-12 row no-margin-bottom no-margin no-padding">
+                                <%= f.select :kind_event_id, @kind_events, options = {:prompt => "Escolha uma opção"}, {class: "evento", required: true} %>
+							</div>
+						</div>
+						<div class="form-control margin">
+							<div class="col-md-12 col-xs-12 row no-margin-bottom">
+                                <label for="estimativa">Data prevista<br>do evento:</label>
+							</div>
+							<div class="col-md-12 col-xs-12 row no-margin-bottom no-margin no-padding">
+                                <%= f.text_field :date_event,  type: 'date', id: 'data', required: true %>
+							</div>
+						</div>
+						<div class="form-control margin">
+							<div class="col-md-12 col-xs-12 row no-margin-bottom">
+                                <label for="estimativa">Estimativa de<br> convidados:</label>
+							</div>
+							<div class="col-md-12 col-xs-12 row no-margin-bottom no-margin no-padding">
+                                <%= f.text_field :invited_number, id: 'invited_number', required: true %>
+							</div>
+						</div>
+						<div class="form-control">
+							<%= f.label :description, class: 'hidden', for: 'descricao' %>
+                            <%= f.text_area :description, class: 'form-control input-mensagem', id: 'descricao', rows: 6, placeholder: 'Mensagem' %>
+						</div>
+						<div class="form-control display-block">
+							<div class="cliente-santander">
+                                <%= f.check_box :customer_santander, {}, "true", "false" %><label for="cliente-santander">Cliente Santander<br>Empresarial</label>
+							</div>
+                            <%= f.submit 'Enviar', class: 'btn-roof' %>
+						</div>
+					<% end %>
+				</div>
+
+			</div>
+			<div class="col-xl-3 col-lg-3 col-md-5 col-xl-offset-2 col-lg-offset-1 hidden-md-up padding-top-med">
+				<div class="four columns">
+					<div class="services-box-2">
+						<div class="icon icon-location-pin"></div>
+						<h6>VISITE-NOS</h6>
+						<p>+Av. Presidente Juscelino Kubitschek, 2041 -  Bairro Itaim Bibi - São Paulo/SP CEP: 04543-011</p>
+					</div>
+				</div>
+				<div class="four columns">
+					<div class="services-box-2">
+						<div class="icon icon-phone"></div>
+						<h6>CONTATO</h6>
+						<p><a href="tel:01148106868" class="link-text">+55 11 4810-6868</a></p>
+					</div>
+				</div>
+				<div class="four columns">
+					<div class="services-box-2">
+						<div class="icon icon-envelope-letter"></div>
+						<h6>E-MAIL</h6>
+						<p><a href="mailto:eventos@033rooftop.com.br" class="link-text">eventos@033rooftop.com.br</a></p>
+					</div>
+				</div>
+<!-- 				<img src="<%= asset_path 'banner-tour360-contact.jpg' %>" class="img-responsive padding-top-small" alt="">		 -->
+			</div>
+		</div>
+	</div>
+</section>
+
+<section id="google-map" class="section">
+	<div id="cd-google-map">
+		<div id="google-container"></div>
+		<div id="cd-zoom-in"></div>
+		<div id="cd-zoom-out"></div>
+		<address>
+			<span>Av. Presidente Juscelino</span><br><span>Kubitschek, 2041</span><br><span>Bairro Itaim Bibi - SP</span>
+		</address>
+
+	</div>
+</section>
+

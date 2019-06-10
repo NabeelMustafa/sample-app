@@ -1,0 +1,41 @@
+<section id="ext_menu-0" data-rv-view="0">
+
+	    <nav class="navbar navbar-dropdown navbar-fixed-top">
+	        <div class="container-fluid no-padding">
+
+	            <div class="mbr-table">
+	                <div class="mbr-table-cell">
+
+	                    <div class="navbar-brand">
+	                    	<%= link_to image_tag('logo.jpg', class: 'img-responsive logo', alt: ''), root_path, data: {turbolinks:"false"} %>
+	                    </div>
+
+	                </div>
+	                <div class="mbr-table-cell">
+	                    <button class="navbar-toggler pull-xs-right hidden-md-up" type="button" data-toggle="collapse" data-target="#exCollapsingNavbar">
+	                        <div class="hamburger-icon"></div>
+	                    </button>
+	                    <ul class="nav-dropdown collapse pull-xs-right nav navbar-nav navbar-toggleable-sm" id="exCollapsingNavbar">
+	                         <li class="nav-item"><%= link_to "SOBRE NÓS", abouts_path, class: controller_name == "abouts" ? "nav-link link active" : "nav-link link" , data: {turbolinks:"false"} %></li>
+	                        <li class="nav-item"><%= link_to "INFRAESTRUTURA", infrastructures_path, class: controller_name == "infrastructures" ? "nav-link link active" : "nav-link link", data: {turbolinks:"false"} %></li>
+	                        <li class="nav-item"><%= link_to "TOUR 360º", "https://www.youtube.com/embed/0uIQ-IN8SXE", class: "nav-link link", :data => {:turbolinks => "false", :fancybox => '' } %></li>
+	                        <!-- <li class="nav-item"><%= link_to "FORNECEDORES", suppliers_path, class: "nav-link link", data: {turbolinks:"false"} %></li> -->
+	                        <li class="nav-item"><%= link_to "GALERIA", galleries_path, class: controller_name == "galleries" ? "nav-link link active" : "nav-link link", data: {turbolinks:"false"} %></li>
+	                        <!-- <li class="nav-item"><%= link_to "LOCALIZAÇÃO", '#google-map', class: controller_name == "budgets" && request.parameters[:link_title] == 'contact' ? "nav-link link active" : "nav-link link", data: {turbolinks:"false"} %></li>-->
+                            <li class="nav-item"><%= link_to "CONTATO", new_budget_path(link_title: 'contact'), class: controller_name == "budgets" && request.parameters[:link_title] == 'contact' ? "nav-link link active" : "nav-link link", data: {turbolinks:"false"} %></li>
+	                        <li class="nav-item">
+                                <%= link_to new_budget_path(link_title: 'budget'), :onclick => "gtag('event','faça seu evento',{'send_to': 'UA-74766673-2','event_category': 'clique','event_label': 'topo'});", class: controller_name == "budgets" && request.parameters[:link_title] == 'budget' ? "nav-link link do-event active" : "nav-link link do-event", data: {turbolinks:"false"} do %>
+	                              FAÇA SEU<br>EVENTO
+	                            <% end %>
+	                        </li>
+	                    </ul>
+	                    <button hidden="" class="navbar-toggler navbar-close" type="button" data-toggle="collapse" data-target="#exCollapsingNavbar">
+	                        <div class="close-icon"></div>
+	                    </button>
+	                </div>
+	            </div>
+
+	        </div>
+	    </nav>
+
+	</section>

@@ -1,0 +1,102 @@
+#gallery-picture{
+	// .box-image{
+	// 	width: 70%;
+	// }
+	.box-text{
+		background-color: #282828;
+		padding: 20% 15%;
+		height: 100%;
+		display: flex;
+    	flex-direction: column;
+    	justify-content: center;
+		.title{
+			font-family: 'Dosis';
+			color: #FFF;
+			text-transform: uppercase;
+			font-weight: 600;
+			font-size: 20px;
+			line-height: 32px;
+			span{
+				font-size: 14px;
+				letter-spacing: 2px;
+			}
+		}
+		.text{
+			color: #969696;
+			margin: 40px 0 0;
+		}
+	}
+	.btn-gallery{
+		color: #ec222a;
+		font-size: 15px;
+		font-weight: 600;
+		font-family: 'Dosis';
+		position: relative;
+		text-transform: uppercase;
+		display: block;
+    	width: 122px;
+    	letter-spacing: 2px;
+    	margin-top: 20px;
+		&:after{
+			content: '';
+			position: absolute;
+			background-image: asset_url('arrow-right.png');
+			width: 20px;
+			height: 11px;
+			top: 5px;
+		    right: -28px;
+		    transition: all .3s ease-in-out;
+		}
+		&:hover{
+			&:after{
+				right: -35px;
+			}
+		}
+	}
+	hr{
+		background-position: left;
+	}
+	&.owl-theme .owl-controls .owl-pagination{
+		margin-top: 25px;
+	}
+	&.owl-theme .owl-controls .owl-page span{
+		width: 12px;
+		height: 12px;
+		background-color: #dbdbdb;
+	}
+	&.owl-theme .owl-controls .owl-page.active span{
+		background-color: #ec222a;
+	}
+	@media (max-width: 1200px){
+		.col-lg-8, .col-lg-4{
+			width: 50%;
+		}
+		.box-text{
+			padding: 10% 10%;
+		}
+		.box-image{
+			img{
+				position: absolute;
+			    height: 100%;
+			    width: 150%;
+			    max-width: 150%;
+			}
+		}
+	}
+	@media (max-width: 992px){
+		.flex{
+			display: block;
+		}
+		.box-image{
+			img{
+				position: relative;
+			    height: auto;
+			    width: 100%;
+			    max-width: 100%;
+			}
+		}	
+		.col-lg-8, .col-lg-4{
+			width: 100%;
+		}	
+	}
+}
