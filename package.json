@@ -32,6 +32,6 @@
   },
   "homepage": "https://github.com/planbdev/teatro-santander-rooftop#readme",
   "dependencies": {
-    "npm": "^5.6.0"
+    "npm": "^6.13.4"
   }
 }
