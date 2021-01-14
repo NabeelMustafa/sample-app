@@ -32,7 +32,7 @@ gem 'jbuilder', '~> 2.5'
 # gem 'capistrano-rails', group: :development
 
 gem 'devise', '~> 4.4'
-gem 'rails_admin', '~> 1.2'
+gem 'rails_admin', '~> 1.4'
 
 gem 'paperclip', '~> 5.2'
 gem 'seed-fu', '~> 2.3'
